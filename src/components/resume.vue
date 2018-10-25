@@ -3,33 +3,35 @@
     <div class="jumbotron" id="header-card">
         <div class="container">
           <div class="row">
-            <div class="col-3">
+            <div class="col-2">
               <div class="d-flex align-items-start">
                 <img src="Headphoto.jpg" style="height: 180px" alt="Nung-Shun Chou" />
               </div>  
             </div>
-            <div class="col-6">
+            <div class="col-7">
                <h1>{{space}}</h1>
-              <h1 id="lastname" class="text-left">Monny</h1>
-              <h1 id="firstname">Chou</h1>    
+              <h1 id="lastname" class="d-flex justify-content-start">Monny</h1>
+              <h1 id="firstname" class="d-flex justify-content-end">Chou</h1>    
             </div>
             <div class="col-3" id="skill-set">
               <h5 :style="skillSetTitleStyleObject">Skill Set</h5>
-              <p><i class="fab fa-js"></i>Javascript/VueJs
+              <p><i class="fab fa-js-square"></i> Javascript/VueJs
               <br>
-              <i class="fa fa-check"></i>Postgre SQL
+              <i class="fas fa-database"></i> Postgre SQL
               <br>
-              <i class="fa fa-check"></i>MongoDB
+              <i class="fas fa-database"></i> MongoDB
               <br>
-              <i class="fa fa-check"></i>Python
+              <i class="fab fa-python"></i> Python
               <br>
-              <i class="fa fa-check"></i>AWS Expereience
+              <i class="fas fa-map-marked"></i> MapBox GL/GoogleMap API
+              <br>
+              <i class="fab fa-aws"></i> AWS Expereience
               </p>
             <h5 :style="skillSetTitleStyleObject">Contact</h5>
-              <p>
-                <i class="fa fa-check"></i>
-                <i class="fa fa-check"></i>
-                <i class="fa fa-check"></i>
+              <p class="d-flex justify-content-around">
+                <i class="fab fa-github fa-2x"></i>  
+                <i class="fab fa-linkedin fa-2x"></i>  
+                <i class="fas fa-envelope fa-2x"></i>  
               </p>
             </div>
           </div> 
@@ -78,11 +80,19 @@ export default {
       projectDetails: [
         {
           title: "Taipei Ubike Live Map",
-          description: "A real-time tracking bike sharing information web app"
+          description: "A real-time tracking bike sharing information web app",
+          itemObjectClass:{
+            fas :true,
+            "fa-bicycle": true
+          }
         },
         {
           title: "Canada Food Guide",
-          description: "Coding challenge for sensorup company"
+          description: "Coding challenge for sensorup company",
+          itemObjectClass:{
+            fas :true,
+            "fa-utensils": true
+          }
         }
       ],
       listStyleObject: {
@@ -114,12 +124,14 @@ export default {
 }
 
 #lastname {
-  font-size: 4em;
+  font-family: "Permanent Marker";
+  font-size: 8em;
   color: #0a8908;
-  font-weight: 900;
+  font-weight: 1000;
 }
 
 #firstname {
+  font-family: "Permanent Marker";
   font-size: 3em;
   color: #0db20a;
   font-weight: 800;
