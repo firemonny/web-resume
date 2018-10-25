@@ -1,8 +1,8 @@
 <template>
-    <div class="card">
-        <div class="card-body" :style="listStyleObject">
+    <div class="card" :style="listStyleObject">
+        <div class="card-body" >
             <h5 class="card-title">{{projectDetail.title}}</h5>
-            <p class="card-text">{{projectDetail.description}}</p>
+            <p :style="paraStyle" class="card-text">{{projectDetail.description}}</p>
         </div>
     </div>
 </template>
@@ -14,6 +14,9 @@ export default {
       listStyleObject: {
         width: "18rem",
         "background-color": "#FEDD14"
+      },
+      paraStyle: {
+        color: "FFAD05"
       }
     };
   },
