@@ -1,29 +1,61 @@
 <template>
 <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron" id="header-card">
         <div class="container">
-            <div class="d-flex align-items-start">
+          <div class="row">
+            <div class="col-3">
+              <div class="d-flex align-items-start">
                 <img src="Headphoto.jpg" style="height: 180px" alt="Nung-Shun Chou" />
-                <h1>{{space}}</h1>
-                <h1>Monny Chou</h1>
-            </div>      
+              </div>  
+            </div>
+            <div class="col-6">
+               <h1>{{space}}</h1>
+              <h1 id="lastname" class="text-left">Monny</h1>
+              <h1 id="firstname">Chou</h1>    
+            </div>
+            <div class="col-3" id="skill-set">
+              <h5 :style="skillSetTitleStyleObject">Skill Set</h5>
+              <p><i class="fab fa-js"></i>Javascript/VueJs
+              <br>
+              <i class="fa fa-check"></i>Postgre SQL
+              <br>
+              <i class="fa fa-check"></i>MongoDB
+              <br>
+              <i class="fa fa-check"></i>Python
+              <br>
+              <i class="fa fa-check"></i>AWS Expereience
+              </p>
+            <h5 :style="skillSetTitleStyleObject">Contact</h5>
+              <p>
+                <i class="fa fa-check"></i>
+                <i class="fa fa-check"></i>
+                <i class="fa fa-check"></i>
+              </p>
+            </div>
+          </div> 
         </div>
     </div>
 <div class="container">
   <div class="row">
     <div class="col-8">
-            <h3><strong>2018 - present	    Junior Software Developer</strong></h3>
-			<h5>SensorUp Inc. – Calgary Alberta</h5>
-        <ul class="list-group">
-            <li class="list-group-item"><i class="fa fa-check"></i>Developing Web App project by Vue/React Js</li>
-            <li class="list-group-item"><i class="fa fa-check"></i>Geo-location API (Leaflet MapBoxGL) and chart library (Echart)</li>
-            <li class="list-group-item"><i class="fa fa-check"></i>Following git flow process and agile developemnt team</li>
-            <li class="list-group-item"><i class="fa fa-check"></i>Experience with Cloud Service (Amazon Web Services) </li>
-            <li class="list-group-item"><i class="fa fa-check"></i>Analyzing different user requirements for the various database applications </li>
+      <h3 :style="h3StyleObject"><strong>2018 - present	    Junior Software Developer</strong></h3>
+			<h5 :style="h5StyleObject">SensorUp Inc. – Calgary Alberta</h5>
+        <ul class="list-group text-sm-left experience-history" style="text-align: 'left'">
+            <li class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i>Developing Web App project by Vue/React Js</li>
+            <li class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i>Geo-location API (Leaflet MapBoxGL) and chart library (Echart)</li>
+            <li class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i>Following git flow process and agile developemnt team</li>
+            <li class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i>Experience with Cloud Service (Amazon Web Services) </li>
+            <li class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i>Analyzing different user requirements for the various database applications </li>
         </ul>
-            <i class="fa fab fa-github"></i>
-            <i class="fa fa-address-card"></i>
-            <i class="fa fa-check"></i>
+         <h3 :style="h3StyleObject"><strong>2016 - 2017	    Advance Meter Infrastructure Analyst Co-op</strong></h3>
+			<h5  :style="h5StyleObject">Hydro One – Mississauga Ontario</h5>
+        <ul class="list-group text-sm-left experience-history" style="text-align: 'left'">
+            <li class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i>Full stack developer, Maintained metering data service production database</li>
+            <li class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i>Used SAP, IEE and Multiple Head end system to analyze and handle exceptions</li>
+            <li class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i>Produced automation script files for daily reports and tasks with Python</li>
+            <li class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i>Troubleshot and designed solutions for improving telecommunication network</li>
+            <li class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i>Completed complex meter system design projects</li>
+        </ul>
     </div>
     <div class="col-4">
         <div v-for="(projectDetail, index) in projectDetails" :key="index">
@@ -52,7 +84,23 @@ export default {
           title: "Canada Food Guide",
           description: "Coding challenge for sensorup company"
         }
-      ]
+      ],
+      listStyleObject: {
+        color: "#ffffff",
+        "background-color": "#4392F1"
+      },
+      h3StyleObject: {
+        color: "#4392F1"
+      },
+      h5StyleObject: {
+        color: "#109fce",
+        "font-weight": 800
+      },
+      skillSetTitleStyleObject: {
+        "font-size": "1.75em",
+        "font-weight": 900,
+        color: "#0a8908"
+      }
     };
   },
   components: {
@@ -63,5 +111,34 @@ export default {
 <style>
 #header {
   background-color: #42b9f4;
+}
+
+#lastname {
+  font-size: 4em;
+  color: #0a8908;
+  font-weight: 900;
+}
+
+#firstname {
+  font-size: 3em;
+  color: #0db20a;
+  font-weight: 800;
+}
+
+#header-card {
+  background-color: #f5f5dc;
+  border-color: #a5e510;
+  border-width: 20px;
+  border-radius: 40px 40px;
+  border-style: double;
+}
+
+#skill-set {
+  font-weight: 800;
+  text-align: left;
+}
+
+.experience-history {
+  background-color: #f5f5dc;
 }
 </style>
