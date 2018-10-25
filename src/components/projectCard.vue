@@ -1,7 +1,7 @@
 <template>
     <div class="card" :style="listStyleObject">
         <div class="card-body" >
-            <i :class="projectDetail.itemObjectClass"></i>
+            <a style="color: #FFAD05" :href="projectDetail.url" target="_blank"><i :class="projectDetail.itemObjectClass"></i></a>
             <h5 class="card-title">{{projectDetail.title}}</h5>
             <p  class="card-text">{{projectDetail.description}}</p>
         </div>
