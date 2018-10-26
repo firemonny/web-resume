@@ -5,7 +5,7 @@
         <ul class="list-group text-sm-left experience-history" style="text-align: 'left'">           
             <li v-for="(task,index) in workingHistoryDetail.tasks" 
             :key="index"
-            class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i> {{task}}}</li>
+            class="list-group-item" :style="listStyleObject"><i class="fa fa-check"></i> {{task}}</li>
         </ul>
     </div>
 </template>

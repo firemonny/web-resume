@@ -1,10 +1,12 @@
 <template>
     <div class="card" :style="listStyleObject">
-        <div class="card-body" >
-            <a style="color: #FFAD05" :href="projectDetail.url" target="_blank"><i :class="projectDetail.itemObjectClass"></i></a>
-            <h5 class="card-title">{{projectDetail.title}}</h5>
-            <p  class="card-text">{{projectDetail.description}}</p>
-        </div>
+        <a style="color: #934505" :href="projectDetail.url" target="_blank">
+          <div class="card-body" >
+              <i :class="projectDetail.itemObjectClass"></i>
+              <h5 class="card-title">{{projectDetail.title}}</h5>
+              <p  class="card-text">{{projectDetail.description}}</p>
+          </div>
+        </a>
     </div>
 </template>
 <script>
@@ -16,7 +18,7 @@ export default {
         width: "18rem",
         "background-color": "#FEDD14",
         "margin-top": "20px",
-        "color": "#FFAD05"
+        color: "#934505"
       }
     };
   },

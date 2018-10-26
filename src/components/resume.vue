@@ -3,26 +3,26 @@
     <div class="jumbotron" id="header-card">
         <div class="container">
           <div class="row">
-            <div class="col-3">
+            <div class="col-lg-3 col-sm-12">
               <div class="d-flex align-items-start">
                 <img src="headPhoto.jpg" id="headPhoto" alt="Nung-Shun Chou" />
               </div>  
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12">
                <h1>{{space}}</h1>
               <h1 id="lastname" class="d-flex justify-content-start">Monny</h1>
               <h1 id="firstname" class="d-flex justify-content-end">Chou</h1>    
             </div>
-            <div class="col-3" id="skill-set">
+            <div class="col-lg-3 col-sm-12" id="skill-set">
               <h5 :style="skillSetTitleStyleObject">Skill Set</h5>
               <div v-for="(skillSetDetail,index) in skillSetDetails" :key="index">
                 <skill-set :skillSet="skillSetDetail"></skill-set> 
               </div>
-            <h5 :style="skillSetTitleStyleObject">Contact</h5>
+              <br>
               <p class="d-flex justify-content-around">
-                <a href="https://github.com/firemonny/" target="_blank"><i class="fab fa-github fa-2x"></i></a>  
-                <a href="https://www.linkedin.com/in/nung-shun-monny-chou-5527317a/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>  
-                <a href="mailto:firemonny@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="https://github.com/firemonny/" target="_blank"><i class="fab fa-github fa-3x"></i></a>  
+                <a href="https://www.linkedin.com/in/nung-shun-chou" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>  
+                <a href="mailto:firemonny@gmail.com" target="_blank"><i class="fas fa-envelope fa-3x"></i></a>
               </p>
             </div>
           </div> 
@@ -30,12 +30,12 @@
     </div>
 <div class="container">
   <div class="row">
-    <div class="col-8">
+    <div class="col-lg-8 col-sm-12">
         <div v-for="(workingHistoryDetail,index) in workingHistoryDeatils" :key="index">
           <working-history :workingHistoryDetail="workingHistoryDetail"></working-history>
         </div>
     </div>
-    <div class="col-4">
+    <div class="col-lg-4 col-sm-12">
         <div v-for="(projectDetail, index) in projectDetails" :key="index">
             <project-card :projectDetail="projectDetail"></project-card>
         </div>
@@ -109,7 +109,7 @@ export default {
             "fa-bicycle": true,
             "fa-2x": true
           },
-          url: "http://taipei-youbike.monnychou.com"
+          url: "https://taipei-youbike.monnychou.com"
         },
         {
           title: "Canada Food Guide",
@@ -120,6 +120,17 @@ export default {
             "fa-2x": true
           },
           url: "https://evening-escarpment-63030.herokuapp.com/"
+        },
+        {
+          title: "Stock Trade Simulator App",
+          description: "Vue Learning Project",
+          itemObjectClass: {
+            fas: true,
+            "fa-money-bill": true,
+            "fa-2x": true
+          },
+          url:
+            "http://monny-stock-trade-app.s3-website.ca-central-1.amazonaws.com/"
         }
       ],
       workingHistoryDeatils: [
@@ -128,11 +139,11 @@ export default {
           company: "SensorUp Inc. – Calgary Alberta",
           jobTitle: "Junior Software Developer",
           tasks: [
-            "Developing Web App project by Vue/React Js",
+            "Developing web apps project using Vue.js/React.js",
             "Geo-location API (Leaflet MapBoxGL) and chart library (Echart)",
-            "Following git flow process and agile developemnt team",
+            "Utilized git flow process and agile development",
             "Experience with Cloud Service (Amazon Web Services)",
-            "Analyzing different user requirements for the various database applications"
+            "Developing automate script and data analyzing using python"
           ]
         },
         {
@@ -179,18 +190,18 @@ export default {
 }
 
 #lastname {
-  font-family: "Permanent Marker";
-  font-size: 8em;
+  font-family: "Kaushan Script";
+  font-size: 6em;
   color: #0a8908;
-  font-weight: 1000;
+  font-weight: 800;
   text-shadow: 2px 2px grey;
 }
 
 #firstname {
-  font-family: "Permanent Marker";
-  font-size: 3em;
+  font-family: "Kaushan Script";
+  font-size: 4em;
   color: #0db20a;
-  font-weight: 800;
+  font-weight: 700;
   text-shadow: 2px 2px grey;
 }
 
@@ -212,6 +223,7 @@ export default {
   height: 180px;
   border-radius: 50%;
   box-shadow: 3px 3px 8px gray;
+  margin: 30px 0 0 0;
 }
 .experience-history {
   background-color: #f5f5dc;
